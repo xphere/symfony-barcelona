@@ -5,10 +5,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta content="index,follow" name="robots"/>
-        <meta content="{% block description %}{% trans %} messages.head.description {% endtrans %}{% endblock %}" name="description"/>
-        <meta content="{% block keywords %}{% trans %} messages.head.keywords {% endtrans %}{% endblock %}" name="keywords"/>
+        <meta content="{% block description %}{% trans %} sfbcn.meta.description {% endtrans %}{% endblock %}" name="description"/>
+        <meta content="{% block keywords %}{% trans %} sfbcn.meta.keywords {% endtrans %}{% endblock %}" name="keywords"/>
         <meta content="7 days" name="revisit-after"/>
-        <title>Symfony-Barcelona{% block title %}{% endblock %}</title>
+        <title>{% trans %} sfbcn.meta.title {% endtrans %}{% block title %}{% endblock %}</title>
         {% block stylesheets %}
             {% stylesheets '@SFBCNWebsiteBundle/Resources/assets/css/01-normalize.css'
                            '@SFBCNWebsiteBundle/Resources/assets/css/*-web-*.css' %}
