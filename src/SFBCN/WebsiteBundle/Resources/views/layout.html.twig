@@ -1,32 +1,36 @@
 {# layout.html.twig #}
 {% spaceless %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ app.session.locale }}">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta content="index,follow" name="robots"/>
-        <meta content="{% block description %}{% trans %} sfbcn.meta.description {% endtrans %}{% endblock %}" name="description"/>
-        <meta content="{% block keywords %}{% trans %} sfbcn.meta.keywords {% endtrans %}{% endblock %}" name="keywords"/>
-        <meta content="7 days" name="revisit-after"/>
-        <title>{% trans %} sfbcn.meta.title {% endtrans %}{% block title %}{% endblock %}</title>
-        {% block stylesheets %}
+        {% block head %}
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta content="index,follow" name="robots" />
+            <meta content="{% block description 'sfbcn.meta.description'|trans %}" name="description"/>
+            <meta content="{% block keywords 'sfbcn.meta.keywords'|trans %}" name="keywords"/>
+            <meta content="7 days" name="revisit-after"/>
+            <title>{% block title 'sfbcn.meta.title'|trans %}</title>
             {% stylesheets '@SFBCNWebsiteBundle/Resources/assets/css/01-normalize.css'
                            '@SFBCNWebsiteBundle/Resources/assets/css/*-web-*.css' %}
                 <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
             {% endstylesheets %}
         {% endblock %}
+        <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     </head>
     <body>
-        <header>
-            {% include 'SFBCNWebsiteBundle::menu.html.twig' %}
+        <header id="header">
+            <h1 class="title">{{ block('title') }}</h1>
+            <nav>
+                {% include 'SFBCNWebsiteBundle::menu.html.twig' %}
+            </nav>
         </header>
-        <section>
-            {% block content %}{% endblock %}
-        </section>
-        <footer>
+        <div id="content">
+            {% block content '' %}
+        </div>
+        <footer id="footer">
             {% include 'SFBCNWebsiteBundle::footer.html.twig' %}
         </footer>
-        {% block javascripts %}
+        {% block scripts %}
             {% javascripts '@SFBCNWebsiteBundle/Resources/assets/js/*' %}
                 <script type="text/javascript" src="{{ asset_url }}"></script>
             {% endjavascripts %}
