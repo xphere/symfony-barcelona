@@ -3,5 +3,11 @@ sfbcn:
     keywords: symfony, Symfony2, asociación, desarrolladores, Barcelona, Twig, Doctrine2, Assetic, PHP, PHP5.3
     description: Página web del grupo Symfony Barcelona
     title: Symfony-Barcelona
+  links:
+    about: Acerca de
+    contact: Contacto
+    events: Eventos
+    home: Inicio
+    news: Noticias
   index:
     helloworld: Hola, Symfony Barcelona
