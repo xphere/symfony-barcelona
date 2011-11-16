@@ -47,8 +47,8 @@ img { border: 0; -ms-interpolation-mode: bicubic; }
    Links
    ========================================================================== */
 
-a { color: #00E; }
-a:visited { color: #551A8B; }
+a { color: #08C; }
+a:visited { color: inherit; }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
