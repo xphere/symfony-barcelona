@@ -166,3 +166,30 @@ body {
 .social-menu .link-github a {
     background-position: -240px 0;
 }
+
+aside.related {
+    background-color: #EAEAEA;
+    border-radius: 10px;
+    font-size: 11px;
+    overflow: hidden;
+    padding: 2em 0 1em 2em;
+}
+
+aside.related article {
+    float: left;
+    margin: 0 -1em;
+    padding: 0 1em;
+    width: 33%;
+}
+
+aside.related h1 {
+    color: #759E1A;
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+aside.related p {
+    padding-right: 2em;
+    line-height: 1.4em;
+}
