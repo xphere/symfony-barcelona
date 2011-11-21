@@ -170,7 +170,7 @@ body {
 aside.related {
     background-color: #EAEAEA;
     border-radius: 10px;
-    font-size: 11px;
+    font-size: 13px;
     overflow: hidden;
     padding: 2em 0 1em 2em;
 }
@@ -184,6 +184,7 @@ aside.related article {
 
 aside.related h1 {
     color: #759E1A;
+    font-size: 1em;
     font-weight: normal;
     margin: 0;
     text-transform: uppercase;
@@ -192,4 +193,27 @@ aside.related h1 {
 aside.related p {
     padding-right: 2em;
     line-height: 1.4em;
+}
+
+.page-content {
+    clear: both;
+    overflow: hidden;
+}
+
+.page-content h1, .page-content p {
+    margin: 1em 12px;
+}
+
+.page-content h1 {
+    font: 40px/1em normal Georgia,"Times New Roman",Times,serif;
+    margin-top: 0;
+}
+
+.page-content p {
+    text-align: justify;
+}
+
+.home article {
+    float: left;
+    width: 33%;
 }
